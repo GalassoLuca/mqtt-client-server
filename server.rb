@@ -1,15 +1,5 @@
 require_relative 'personal-mqtt'
 
-class EM32 < MyMqtt
-  attr_accessor :pub_topic
-
-  def initialize (patient_id, session_id)
-    @pub_topic = "/azienda/#{patient_id}/#{session_id}"
-
-    super()
-  end
-end
-
 class SERVER < MyMqtt
   attr_accessor :sub_topic
 
@@ -18,4 +8,13 @@ class SERVER < MyMqtt
     super
     self.subscribe(@sub_topic)
   end
+end
+
+
+
+
+server = SERVER.new
+
+while true do 
+	sleep 0.001
 end

@@ -1,7 +1,16 @@
-require_relative 'classes'
+require_relative 'personal-mqtt'
+
+class EM32 < MyMqtt
+  attr_accessor :pub_topic
+
+  def initialize (patient_id, session_id)
+    @pub_topic = "/azienda/#{patient_id}/#{session_id}"
+
+    super()
+  end
+end
 
 
-server = SERVER.new
 
 patient1 = EM32.new("patient1", "sessionXXX")
 patient1.publish("First message")
@@ -13,15 +22,6 @@ patient2.publish("First message")
 patient2.publish("Second message")
 patient2.publish("Third message")
 
-
-### Waiting to assert that the message is displayed by on_message callback
-sleep 1
-
 ### Calling an explicit disconnect
-server.disconnect
 patient1.disconnect
 patient2.disconnect
-
-
-
-
