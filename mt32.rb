@@ -25,3 +25,13 @@ patient2.publish("Third message")
 ### Calling an explicit disconnect
 patient1.disconnect
 patient2.disconnect
+
+
+### Different session 
+patient3 = MT32.new("patient3", "sessionYYY")
+patient3.publish("First message")
+patient3.publish("Second message")
+patient3.publish("Third message")
+
+### Calling an explicit disconnect
+patient3.disconnect
