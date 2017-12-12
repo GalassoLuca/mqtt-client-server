@@ -6,20 +6,13 @@ NOTA: in un primo momento non verrà implementata dato che il server farà il do
 require_relative 'personal-mqtt'
 
 class SERVER < MyMqtt
-  attr_accessor :sub_topic
-
-  def initialize
-    @sub_topic = "/azienda/#"
-    super
-    self.subscribe(@sub_topic)
-  end
 end
 
-
-
-
 server = SERVER.new
+server.subscribe("azienda/#")
 
-while true do 
-	sleep 0.001
+
+# Attesa dei dati di tutti i devices
+while true do
+  sleep 0.001
 end
