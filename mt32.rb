@@ -1,3 +1,7 @@
+=begin
+Logica del device MT32
+=end
+
 require_relative 'personal-mqtt'
 
 class MT32 < MyMqtt

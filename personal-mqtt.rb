@@ -1,3 +1,7 @@
+=begin
+Generale implementazione di PAHO in modo da visualizzare lo scambio di messaggi MQTT
+=end
+
 require 'paho-mqtt'
 
 # abstract class
@@ -26,8 +30,7 @@ class MyMqtt < PahoMqtt::Client
     end
 
     self.on_message do |message|
-      puts " --- new message received ---"
-      puts "Message.id \t#{message.id}"
+      puts " --- #{message.id} ---"
       puts "Listening topic #{message.topic}"
       puts "Payload \t#{message.payload}"
       puts "Payload.size \t#{message.payload.size}"
