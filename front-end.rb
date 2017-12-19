@@ -16,7 +16,7 @@ pazienti = ['mt_serial_1', 'mt_serial_2']
 id_sessione = 'sessionXXX'
 
 # Sottoscrizione al topic della sessione appena creata
-front_end.subscribe("azienda/+/#{id_sessione}/#")
+front_end.subscribe("azienda/+/#{id_sessione}/+")
 
 # Invio della configurazione ai relativi devices
 pazienti.collect {|p|
