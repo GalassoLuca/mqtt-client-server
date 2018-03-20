@@ -27,6 +27,10 @@ e avviarlo con
 brew services start mosquitto
 ```
 
+#### Mosquitto example
+
+Subscription with `mosquitto_sub -t "/World"` and publish with `mosquitto_sub -t "/World" -m "World"`
+
 ### Esecuzione
 
 Per l'esecuzione devono essere eseguiti in ordine il server, i dispositivi MT32 (che attendono la configurazione) e infine il front-end (che invia la configurazione)
