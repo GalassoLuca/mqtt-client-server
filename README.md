@@ -15,6 +15,18 @@ Infine il front-end, una volta avviato, ascolta sul topic della sessione con id 
 
 È necessario installare Ruby e [paho-mqtt](https://github.com/RubyDevInc/paho.mqtt.ruby)  
 
+### Broker
+
+Per la scelta del broker è possibile utilizzare iot.eclipse.org oppure avviare un broker locale come [Mosquitto](https://mosquitto.org/) che è possibile installarlo tramite brew
+
+```
+brew install mosquitto
+```
+e avviarlo con
+```
+brew services start mosquitto
+```
+
 ### Esecuzione
 
 Per l'esecuzione devono essere eseguiti in ordine il server, i dispositivi MT32 (che attendono la configurazione) e infine il front-end (che invia la configurazione)
