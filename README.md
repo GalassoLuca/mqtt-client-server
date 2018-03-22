@@ -26,6 +26,10 @@ e avviarlo con
 ```
 brew services start mosquitto
 ```
+o con
+```
+/usr/local/sbin/mosquitto -c /usr/local/etc/mosquitto/mosquitto.conf
+```
 
 #### Mosquitto example
 
