@@ -35,8 +35,17 @@ class MyMqtt < PahoMqtt::Client
     end
 
     # CONNECTING TO THE BROKER
-    # self.connect('localhost', 1883)
-    self.connect('iot.eclipse.org', 1883)
+    # ip = 'iot.eclipse.org'
+    # port = 1883
+    ###
+    ip = 'localhost'
+    port = 1883
+    ###
+    # ip = 'broker.mqttdashboard.com'
+    # port = 8000
+    
+    puts "Connecting #{ip} @ #{port}"
+    self.connect(ip, port)
   end
 
   def subscribe(*topics)
