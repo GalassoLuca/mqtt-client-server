@@ -40,9 +40,6 @@ class MyMqtt < PahoMqtt::Client
     ###
     ip = 'localhost'
     port = 1883
-    ###
-    # ip = 'broker.mqttdashboard.com'
-    # port = 8000
     
     puts "Connecting #{ip} @ #{port}"
     self.connect(ip, port)
