@@ -38,6 +38,9 @@ class MyMqtt < PahoMqtt::Client
     # ip = 'iot.eclipse.org'
     # port = 1883
     ###
+    # ip = 'broker.mqttdashboard.com'
+    # port = 1883
+    ###
     ip = 'localhost'
     port = 1883
     
